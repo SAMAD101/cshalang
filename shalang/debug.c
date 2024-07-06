@@ -2,6 +2,12 @@
 
 #include "debug.h"
 
+
+static int simpleInstruction(const char* name, int offset) {
+  printf("%s\n", name);
+  return offset + 1;
+}
+
 void disassembleChunk(Chunk* chunk, const char* name) {
   printf("== %s ==\n", name);
 
@@ -21,9 +27,4 @@ int disassembleInstruction(Chunk* chunk, int offset) {
       printf("Unknown opcode %d\n", instruction);
       return offset + 1;
   }
-}
-
-static int simpleInstruction(const char* name, int offset) {
-  printf("%s\n", name);
-  return offset + 1;
 }
