@@ -1,5 +1,5 @@
 #include "common.h"
-#include "debug.h"
+#include "debug.h" // debug.h contains inclusion of chunk.h
 
 #define EXIT_SUCCESS 0
 
